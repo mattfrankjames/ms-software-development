@@ -1,5 +1,4 @@
 for i in range(3):
-    inputFahrenheitString = input("Enter the temperature in Fahrenheit: ")
-    tempInF = float(inputFahrenheitString)
+    tempInF = float(input("Enter the temperature in Fahrenheit: "))
     tempInC = (tempInF - 32) * (5/9)
-    print("The temperature in Celsius is: ", tempInC, "degrees")
+    print("The temperature in Celsius is: " + str(tempInC) + " degrees")
