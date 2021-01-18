@@ -1,4 +1,4 @@
-# acculator variable
+# accumulator
 baseScore = 0
 # How many days to score
 daysToScore = int(input('How many days of scores? '))
