@@ -33,7 +33,7 @@ def main():
     treeTrunkRight = g.Line(g.Point(9, 0), g.Point(9, 5))
     treeTrunkRight.draw(win)
     
-    treeTop = g.Circle(g.Point(1, 5.5), .75)
+    treeTop = g.Circle(g.Point(1, 5.5), .5)
     treeTop.setFill(g.color_rgb(50, 205, 50))
     treeTop.draw(win)
     
