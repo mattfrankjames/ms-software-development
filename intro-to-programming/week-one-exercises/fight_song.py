@@ -5,7 +5,8 @@ def basicChant(lyric):
     print(lyric)
     
 def extraChant(lyricA, lyricB):
-    print(lyricA, lyricB)
+    print(lyricA,)
+    print(lyricB)
     print(lyricA)
     print('\n')
 
