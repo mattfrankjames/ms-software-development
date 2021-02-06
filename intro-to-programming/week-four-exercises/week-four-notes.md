@@ -1,3 +1,3 @@
-- I spent around an hour across both of these programs.
+- I spent around an hour and a halfacross both of these programs.
 - The easiest part of this assignment was the string formatting in the madlib maker program.
-- Honestly the hardest part was that I had a take home coding challenge for a job interview this past week and the context switching between that and Python was a little bit difficult.
+- Honestly the hardest part was that I had a take home coding challenge for a job interview this past week and the context switching between that and Python was a little bit difficult. Also, working with the shape and types of the data in the `17-oct-sales.txt` was a bit challenging.
