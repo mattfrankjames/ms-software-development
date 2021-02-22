@@ -110,6 +110,6 @@ def main():
     elif reportChoice == 'm':
         print('Label       Pct Sold     Sales Total')
         for machine in machinesList:
-            print( '{:8} {:8.2f}% ${:10}'.format(machine.getName(), machine.getSoldPct(), machine.getTotalSales()))
+            print( '{:8} {:8.2f}% ${:10.2f}'.format(machine.getName(), machine.getSoldPct(), machine.getTotalSales()))
         
 main()
