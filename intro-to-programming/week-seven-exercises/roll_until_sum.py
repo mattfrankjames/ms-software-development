@@ -23,7 +23,7 @@ def printSumMessage(rollOne, rollTwo, sum):
 def main():
     targetSum = getTargetSum()
     rollOne, rollTwo, sum = getRollValues(2)
-    rollCount = 0
+    rollCount = 1
     while targetSum != sum:
         printSumMessage(rollOne, rollTwo, sum)
         rollOne, rollTwo, sum = getRollValues(2)
