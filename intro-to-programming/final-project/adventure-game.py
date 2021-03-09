@@ -14,7 +14,7 @@ class Character:
             print('You found a Horcrux! Put {0} in your chest!'.format(horcrux))
             self.horcruxes.append(horcrux)
         else:
-            print('Uh oh, looks like a fake {0}'.format(horcrux))
+            print('Uh oh, looks like you found a fake {0}'.format(horcrux))
     def move(self):
         print('move')
         
@@ -50,9 +50,18 @@ def actionToTake():
     return actionToTake
 
     
-def encounterEnemy(character, enemy, action):  
-    print('Oh no, it\'s {0}, they want to {1}!'.format(enemy, action))
-    enemy = Enemy(enemy)
+def encounterEnemy(character, enemy, action):
+    encounteredEnemies = []
+    # Check to see if the random enemy is one we've encountered
+    if enemy not in encounteredEnemies:
+        print('Oh no, it\'s {0}, they want to {1}!'.format(enemy, action))
+        enemy = Enemy(enemy)
+        encounteredEnemies.append(enemy)
+    # if the random enemy has already been defeated, then we have to fight a dementor
+    else:
+        print('Oh no, it\'s a Dementor, they want to give you the dementor\'s kiss!')
+        enemy = Enemy('The Dementor')
+        
     while(enemy.lifePoints >= 0 and character.lifePoints >= 0):
         print('{0} is attacking you!'.format(enemy.name))
         enemy.attack(character)
