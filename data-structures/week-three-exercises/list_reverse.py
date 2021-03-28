@@ -1,5 +1,5 @@
 def list_reverse(list):
-  # Base case1
+  # Base case
   if len(list) == 0 or len(list) == 1: # If the array is empty, or only has one item, return it unchanged
     return list
  
