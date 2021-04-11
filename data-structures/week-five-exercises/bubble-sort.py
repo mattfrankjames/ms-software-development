@@ -18,5 +18,3 @@ list = [64, 34, 25, 12, 22, 11, 90]
 bubble_sort(list)
 
 print(list)
-# for i in range(len(list)):
-#     print("%d" % list[i]),
