@@ -15,6 +15,7 @@ class BinHeap:
     self.heapList.append(k)
     self.currentSize = self.currentSize + 1
     self.percUp(self.currentSize)
+    return self.heapList
   def percDown(self,i):
     while (i * 2) <= self.currentSize:
       mc = self.minChild(i)
@@ -45,17 +46,29 @@ class BinHeap:
     while (i > 0):
       self.percDown(i)
       i = i - 1
+    return self.heapList
+  def access_heap_list(self):
+    return self.heapList;
 
-heap = BinHeap()
+heap_one = BinHeap()
 
 rand_list = []
 
 def generate_list():
-  for i in range(1, 10):
+  for i in range(1, 16):
     rand_list.append(randrange(1, 50))
-    rand_list.sort()
 
+def single_item_insert():
+  heap_two = BinHeap()
+  for i in range(len(rand_list)):
+    BinHeap.insert(heap_two, rand_list[i])
+  return heap_two.access_heap_list()
 generate_list()
+
+tree_with_list_arg = BinHeap.buildHeap(heap_one, rand_list)
+tree_list_single = single_item_insert()
+
 print(rand_list)
 
-BinHeap.buildHeap(heap, rand_list)
+print(tree_with_list_arg)
+print(tree_list_single)
