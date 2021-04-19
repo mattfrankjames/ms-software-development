@@ -51,8 +51,8 @@ heap = BinHeap()
 rand_list = []
 
 def generate_list():
-  for i in range(1, 10):
-    rand_list.append(randrange(1, 50))
+  for i in range(1, 16):
+    rand_list.append(randrange(1, 80))
     rand_list.sort()
 
 generate_list()
