@@ -10,18 +10,21 @@ class BinHeap:
         tmp = self.heapList[i // 2]
         self.heapList[i // 2] = self.heapList[i]
         self.heapList[i] = tmp
+      print(self.heapList)
       i = i // 2
   def insert(self,k):
     self.heapList.append(k)
     self.currentSize = self.currentSize + 1
     self.percUp(self.currentSize)
-  def percDown(self,i):
+    return self.heapList
+  def percDown(self, i):
     while (i * 2) <= self.currentSize:
       mc = self.minChild(i)
       if self.heapList[i] > self.heapList[mc]:
           tmp = self.heapList[i]
           self.heapList[i] = self.heapList[mc]
           self.heapList[mc] = tmp
+      print(self.heapList)
       i = mc
   def minChild(self,i):
     if i * 2 + 1 > self.currentSize:
@@ -45,17 +48,44 @@ class BinHeap:
     while (i > 0):
       self.percDown(i)
       i = i - 1
+    return self.heapList
+  def access_heap_list(self):
+    return self.heapList;
 
-heap = BinHeap()
+heap_one = BinHeap()
 
 rand_list = []
 
 def generate_list():
   for i in range(1, 16):
-    rand_list.append(randrange(1, 80))
-    rand_list.sort()
+    rand_list.append(randrange(1, 50))
 
+def single_item_insert():
+  heap_two = BinHeap()
+  for i in range(len(rand_list)):
+    BinHeap.insert(heap_two, rand_list[i])
+  return heap_two.access_heap_list()
 generate_list()
-print(rand_list)
 
-BinHeap.buildHeap(heap, rand_list)
+print('list passed as argument:')
+
+tree_with_list_arg = BinHeap.buildHeap(heap_one, rand_list)
+print('')
+print('single item insertion:')
+print('')
+tree_list_single = single_item_insert()
+print('')
+
+# print(rand_list)
+
+print('final heap with list passed in:')
+print('')
+print(tree_with_list_arg)
+print('')
+print('final heap with individual items inserted:')
+print(tree_list_single)
+
+print('')
+print('list the heap was based on:')
+
+print(rand_list)
