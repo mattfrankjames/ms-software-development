@@ -1,5 +1,3 @@
-import math
-
 class State():
 	def __init__(self, cannibal_left, missionary_left, boat, cannibal_right, missionary_right):
 		self.cannibal_left = cannibal_left
@@ -26,15 +24,7 @@ class State():
 		else:
 			return False
 
-	def __eq__(self, other):
-		return self.cannibal_left == other.cannibal_left and self.missionary_left == other.missionary_left \
-                   and self.boat == other.boat and self.cannibal_right == other.cannibal_right \
-                   and self.missionary_right == other.missionary_right
-
-	def __hash__(self):
-		return hash((self.cannibal_left, self.missionary_left, self.boat, self.cannibal_right, self.missionary_right))
-
-def successors(current_state):
+def move(current_state):
 	children = []
 	if current_state.boat == 'left':
 		updated_state = State(current_state.cannibal_left, current_state.missionary_left - 2, 'right',
@@ -112,7 +102,7 @@ def breadth_first_search():
 		if state.goal_met():
 			return state
 		explored.add(state)
-		children = successors(state)
+		children = move(state)
 		for child in children:
 			if (child not in explored) or (child not in not_visited):
 				not_visited.append(child)
