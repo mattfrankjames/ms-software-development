@@ -44,8 +44,6 @@ def play_game():
         print_board(board)
         move = input('It\'s {0}\'s turn. What space do you pick? '.format(turn))
 
-    #move = input()
-
         if board[move] == ' ':
             #place the character on the board
             board[move] = turn
