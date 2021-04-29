@@ -1,3 +1,4 @@
+# Dictionary used to build our board, taking the shape of the number pad on a keyboard.
 board = {
   '7': ' ',
   '8': ' ',
@@ -10,6 +11,7 @@ board = {
   '3': ' '
 }
 
+# maintain a list of keys for reference 
 board_keys = []
 
 for key in board:
@@ -21,7 +23,8 @@ def print_board(board):
     print('{0}|{1}|{2}'.format(board['4'], board['5'], board['6']))
     print('-+-+-')
     print('{0}|{1}|{2}'.format(board['1'], board['2'], board['3']))
-    
+
+# Basic function to check for match across rows, columns and diagonals
 def check_for_win(square_one, square_two, square_three):
     if board[square_one] == board[square_two] == board[square_three]:
         return True
@@ -52,12 +55,15 @@ def play_game():
 
         else:
             print('That space is taken. Pick a different space')
+            # continue through the loop
             continue
     
-    # Check if there is a winning row
+        # Start checking for wins after 5 moves.
         if move_count >= 5:
+            #check each row
             if check_for_win('7', '8', '9'):
                 print_winning_message(turn)
+                # if a win happens, we break out of the loop
                 break
             elif check_for_win('4', '5', '6'):
                 print_winning_message(turn)
@@ -65,6 +71,7 @@ def play_game():
             elif check_for_win('1', '2', '3'):
                 print_winning_message(turn)
                 break
+            #check each column
             elif check_for_win('7', '4', '1'):
                 print_winning_message(turn)
                 break
@@ -74,16 +81,18 @@ def play_game():
             elif check_for_win('9', '6', '3'):
                 print_winning_message(turn)
                 break
+            # check two diagonals
             elif check_for_win('7', '5', '3'):
                 print_winning_message(turn)
                 break
             elif check_for_win('1', '5', '9'):
                 print_winning_message(turn)
                 break
-  
+        # If we get to 9 moves without a win, the game is tied. 
         if move_count == 9:
             print('Game over, tie game')
-
+            break
+        # alternate players
         if turn == 'X':
             turn = 'O'
         else:
@@ -92,6 +101,7 @@ def play_game():
     play_again = input('Would you like to play again? Y/N: ')
 
     if play_again.upper() == 'Y':
+        # clear out the board to start again
         for key in board_keys:
             board[key] = ' '
         play_game()  
