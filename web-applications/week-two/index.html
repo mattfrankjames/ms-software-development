@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My favorite book</title>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Year</th>
+        <th>Links</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jitterbug Perfume</td>
+        <td>Tom Robbins</td>
+        <td>1984</td>
+        <td><a href="https://en.wikipedia.org/wiki/Jitterbug_Perfume">Wikipedia Page</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <form action="submit.php" method="POST">
+    <fieldset>
+      <legend>Login Information</legend>
+      <label for="username">
+        Username:
+        <input id="username" type="text">
+      </label>
+      <label for="password">
+        Password:
+        <input type="password">
+      </label>
+    </fieldset>
+    <label for="comments">
+      Comments:
+      <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+    </label>
+    <input type="submit" value="Submit Form" name="submit">
+    <input type="reset" value="Reset Form" name="reset">
+  </form>
+</body>
+</html>
