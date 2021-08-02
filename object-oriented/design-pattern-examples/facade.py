@@ -12,10 +12,10 @@ class MediaLibrary:
         return '\n'.join(self.__mediaItems)
         
     def addMediaItem(self, item):
-        return item
+        self.__mediaItems.append(item)
         
-    def delMediaItem(self, list, item):
-        list.remove(item)
+    def delMediaItem(self, item):
+        self.__mediaItem.remove(item)
             
     def getMediaItems(self):
         return self.__mediaItems
@@ -33,10 +33,10 @@ class BlogEditor:
         return '\n'.join(self.__posts)
         
     def addPost(self, post):
-        return post
+        self.__posts.append(post)
         
-    def delPost(self, list, post):
-        list.remove(post)
+    def delPost(self, post):
+        self.__posts.remove(post)
         
     def getPosts(self):
         return self.__posts
@@ -53,10 +53,10 @@ class PluginEditor:
         return '\n'.join(self.__plugins)
         
     def addPlugin(self, plugin):
-        return plugin
+        self.__plugins.append(plugin)
         
-    def delPlugin(self, list, plugin):
-        list.remove(plugin)
+    def delPlugin(self, plugin):
+        self.__plugins.remove(plugin)
         
     def getPlugins(self):
         return self.__plugins
@@ -73,10 +73,10 @@ class CommentLibrary:
         return '\n'.join(self.__comments)
         
     def approveComment(self, comment):
-        return comment
+        self.__comments.append(comment)
         
-    def rejectComment(self, list, comment):
-        list.remove(comment)
+    def rejectComment(self, comment):
+        self.__comments.remove(comment)
         
     def getComments(self):
         return self.__comments
@@ -93,10 +93,10 @@ class PageEditor:
         return '\n'.join(self.__pages)
         
     def addPage(self, page):
-        return page
+        self.__pages.append(page)
         
-    def delPage(self, list, page):
-        list.remove(page)
+    def delPage(self, page):
+        self.__pages.remove(page)
         
     def getPages(self):
         return self.__pages
@@ -128,36 +128,36 @@ class AdminUI:
     #----- add methods
     
     def addPage(self, page):
-        self.__pages.append(self.__pageEditor.addPage(page))
+        self.__pageEditor.addPage(page)
         
     def addPost(self, post):
-        self.__posts.append(self.__blogEditor.addPost(post))
+        self.__blogEditor.addPost(post)
         
     def addMediaItem(self, mediaItem):
-        self.__mediaItems.append(self.__mediaLibrary.addMediaItem(mediaItem))
+        self.__mediaLibrary.addMediaItem(mediaItem)
     
     def approveComment(self, comment):
-        self.__comments.append(self.__commentLibrary.approveComment(comment))
+        self.__commentLibrary.approveComment(comment)
         
     def addPlugin(self, plugin):
-        self.__plugins.append(self.__pluginEditor.addPlugin(plugin))
+        self.__pluginEditor.addPlugin(plugin)
         
     #----- delete methods
         
     def delPage(self, page):
-        self.__pageEditor.delPage(self.__pages, page)
+        self.__pageEditor.delPage(page)
         
     def delPost(self, post):
-        self.__blogEditor.delPost(self.__posts, post)
+        self.__blogEditor.delPost(post)
         
     def delMediaItem(self, mediaItem):
-        self.__mediaLibrary.delMediaItem(self.__mediaItems, mediaItem)
+        self.__mediaLibrary.delMediaItem(mediaItem)
     
     def rejectComment(self, comment):
-        self.__commentLibrary.rejectComment(self.__comments, comment)
+        self.__commentLibrary.rejectComment(comment)
         
     def delPlugin(self, list, plugin):
-        self.__pluginEditor.delPlugin(self.__plugins, plugin)
+        self.__pluginEditor.delPlugin(plugin)
     
     #----- accessor methods
     
@@ -185,6 +185,7 @@ class AdminUI:
         print("Comments: " + str(self.getComments()))
         print("Admin is logged in: " + str(self.__isAuthenticated))
         print("Admin is editing: " + str(self.__isEditing))
+        print()
 
 # -- DRIVER APPLICATION -----------------------------------------------------
 

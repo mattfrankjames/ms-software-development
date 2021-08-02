@@ -5,11 +5,8 @@ from datetime import date
 
 class BlogContributor(ABC):
 
-    # Static Variables (Class-Level)
-
     __numberOfContributors = 0
 
-    # Constructor - called when object is created
     
     def __init__(self, contributorID, firstName, lastName, contributorType):
         self.__contributorID = contributorID
@@ -20,13 +17,12 @@ class BlogContributor(ABC):
         self.__permissions = []
         BlogContributor.__numberOfContributors += 1
  
-    # Destructor - called when object is deleted
  
     def __del__(self):
-        print("University employee {} has been deleted.\n".format(self.__contributorID))
+        print("Blog Contributor {} has been deleted.\n".format(self.__contributorID))
         BlogContributor.__numberOfContributors -= 1
  
-    # Public Methods - accessible from outside instantiated object
+
     def updatePermissions(self, permissions=[]):
         self.__permissions.insert(permissions)
     
@@ -51,7 +47,7 @@ class BlogContributor(ABC):
     def showContributorDetails(self):
         raise NotImplementedError
 
-    @staticmethod # Class-level method, not object-level method
+    @staticmethod
     def showNumberOfContributors():
         print("Number of Blog Contributors = ", BlogContributor.__numberOfContributors)
 
