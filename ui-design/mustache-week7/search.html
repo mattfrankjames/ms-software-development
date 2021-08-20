@@ -11,10 +11,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/compiled-css.css" />
-    <title>Mustache | Week 7</title>
+    <title>Racekit | Search</title>
   </head>
 
-  <body class="homepage">
+  <body>
     <div class="wrapper">
       <header>
         <a href="/" aria-label="Home Page" class="logo"
@@ -39,7 +39,7 @@
         </button>
         <nav>
           <ul class="nav__list">
-            <li><a href="./search.html">Find A Race</a></li>
+            <li><a class="current" href="./search.html">Find A Race</a></li>
             <li><a href="./login.html">Login</a></li>
             <li><a href="./profile.html">Profile</a></li>
             <li><a href="./racelist.html">Race List</a></li>
@@ -49,10 +49,22 @@
       </header>
       <main>
         <h1>Race Kit</h1>
-        <div class="button__row">
-          <a href="./login.html" class="button button--primary">Sign In / Sign Up</a>
-          <a href="./search.html" class="button button--secondary">Find a Race</a>
-        </div>
+        <h2>Find your race</h2>
+        <form action="">
+          <div class="input-wrapper">
+            <input type="text" id="name" class="inputField" value="" />
+            <label for="name" class="inputLabel">Location</label>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" id="skill" class="inputField" value="" />
+            <label for="skill" class="inputLabel">Skill Level</label>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" id="style" class="inputField" value="" />
+            <label for="style" class="inputLabel">Discipline</label>
+          </div>
+          <a href="./racelist.html" class="button button--primary">Find A Race</a>
+        </form>
       </main>
       <footer>
         <div class="footer__icons">
@@ -115,12 +127,6 @@
         <span>&copy; 2021 RaceKit</span>
       </footer>
     </div>
-    <script>
-      const btn = document.querySelector('.nav__trigger');
-      const nav = document.querySelector('nav');
-      btn.addEventListener('click', () => {
-        nav.classList.toggle('active');
-      });
-    </script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

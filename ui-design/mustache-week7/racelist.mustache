@@ -39,25 +39,24 @@
         </button>
         <nav>
           <ul class="nav__list">
-            <li><a href="#">Search</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Race List</a></li>
+            <li><a href="./search.html">Find A Race</a></li>
+            <li><a href="./login.html">Login</a></li>
+            <li><a href="./profile.html">Profile</a></li>
+            <li><a  class="current" href="./racelist.html">Race List</a></li>
+            <li><a href="./about.html">About RaceKit</a></li>
           </ul>
         </nav>
       </header>
       <main>
         <h1>Race Kit</h1>
-        <form action="">
-          <label for="search">Search for your race<input id="search" type="text" /></label>
-        </form>
+        <h2>Search Results</h2>
         <div class="card-wrapper">
           {{#races}}
           <div class="card">
-            <h3>{{race}}</h3>
+            <h3><a href="./single-race.html">{{race}}</a></h3>
             <p>{{date}}</p>
             <p>{{location}}</p>
-            <button class="button button--primary">Enter</button>
+            <a href="./register.html" class="button button--primary">Enter</a>
             </div>
       {{/races}}
       </div>
@@ -123,12 +122,6 @@
         <span>&copy; 2021 RaceKit</span>
       </footer>
     </div>
-    <script>
-      const btn = document.querySelector('.nav__trigger');
-      const nav = document.querySelector('nav');
-      btn.addEventListener('click', () => {
-        nav.classList.toggle('active');
-      });
-    </script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

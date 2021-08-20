@@ -14,7 +14,7 @@
     <title>Mustache | Week 7</title>
   </head>
 
-  <body class="homepage">
+  <body>
     <div class="wrapper">
       <header>
         <a href="/" aria-label="Home Page" class="logo"
@@ -49,9 +49,19 @@
       </header>
       <main>
         <h1>Race Kit</h1>
-        <div class="button__row">
-          <a href="./login.html" class="button button--primary">Sign In / Sign Up</a>
-          <a href="./search.html" class="button button--secondary">Find a Race</a>
+        <div class="content__inner">
+          <h2>Race Details</h2>
+          <div class="card card__profile">
+            <div class="profile__inner">
+              <img class="map" src="./images/trail-Greensfelder.jpg" alt="Greensfelder Map" />
+              <div class="details">
+                <h2>Greensfelder Challenge</h2>
+                <h3>October 17th, 2021</h3>
+                <h3>Pacific, MO</h3>
+                <a class="button button--primary" href="./register.html">Enter</a>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       <footer>
@@ -115,12 +125,6 @@
         <span>&copy; 2021 RaceKit</span>
       </footer>
     </div>
-    <script>
-      const btn = document.querySelector('.nav__trigger');
-      const nav = document.querySelector('nav');
-      btn.addEventListener('click', () => {
-        nav.classList.toggle('active');
-      });
-    </script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

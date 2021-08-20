@@ -14,7 +14,7 @@
     <title>Mustache | Week 7</title>
   </head>
 
-  <body class="homepage">
+  <body>
     <div class="wrapper">
       <header>
         <a href="/" aria-label="Home Page" class="logo"
@@ -41,7 +41,7 @@
           <ul class="nav__list">
             <li><a href="./search.html">Find A Race</a></li>
             <li><a href="./login.html">Login</a></li>
-            <li><a href="./profile.html">Profile</a></li>
+            <li><a class="current" href="./profile.html">Profile</a></li>
             <li><a href="./racelist.html">Race List</a></li>
             <li><a href="./about.html">About RaceKit</a></li>
           </ul>
@@ -49,9 +49,23 @@
       </header>
       <main>
         <h1>Race Kit</h1>
-        <div class="button__row">
-          <a href="./login.html" class="button button--primary">Sign In / Sign Up</a>
-          <a href="./search.html" class="button button--secondary">Find a Race</a>
+        <div class="content__inner">
+          <h2>User Profile</h2>
+          <div class="card card__profile">
+            <div class="profile__inner">
+              <img src="./images/profile-pic.jpg" alt="User profile" />
+              <div class="details">
+                <h2>Matt James</h2>
+                <h3>Preferred Discipline: Mountain</h3>
+                <h3>Bike: Specialized Epic</h3>
+                <p>
+                  I've been riding for over twenty years now and love cyclocross and cross country
+                  racing. I've been out of the racing scene since my daughter was born, but I'm
+                  hoping to get back into it next season.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       <footer>
@@ -115,12 +129,6 @@
         <span>&copy; 2021 RaceKit</span>
       </footer>
     </div>
-    <script>
-      const btn = document.querySelector('.nav__trigger');
-      const nav = document.querySelector('nav');
-      btn.addEventListener('click', () => {
-        nav.classList.toggle('active');
-      });
-    </script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

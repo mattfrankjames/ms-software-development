@@ -11,10 +11,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/compiled-css.css" />
-    <title>Mustache | Week 7</title>
+    <title>RaceKit | About</title>
   </head>
 
-  <body class="homepage">
+  <body>
     <div class="wrapper">
       <header>
         <a href="/" aria-label="Home Page" class="logo"
@@ -43,15 +43,24 @@
             <li><a href="./login.html">Login</a></li>
             <li><a href="./profile.html">Profile</a></li>
             <li><a href="./racelist.html">Race List</a></li>
-            <li><a href="./about.html">About RaceKit</a></li>
+            <li><a class="current" href="./about.html">About RaceKit</a></li>
           </ul>
         </nav>
       </header>
       <main>
         <h1>Race Kit</h1>
-        <div class="button__row">
-          <a href="./login.html" class="button button--primary">Sign In / Sign Up</a>
-          <a href="./search.html" class="button button--secondary">Find a Race</a>
+        <div class="card">
+          <h2>About RaceKit</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident est quas veritatis
+            eveniet ab et culpa ipsam. Aperiam amet doloribus eligendi, nisi molestias nesciunt
+            nihil odio, iste in aspernatur mollitia!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident est quas veritatis
+            eveniet ab et culpa ipsam. Aperiam amet doloribus eligendi, nisi molestias nesciunt
+            nihil odio, iste in aspernatur mollitia!
+          </p>
         </div>
       </main>
       <footer>
@@ -115,12 +124,6 @@
         <span>&copy; 2021 RaceKit</span>
       </footer>
     </div>
-    <script>
-      const btn = document.querySelector('.nav__trigger');
-      const nav = document.querySelector('nav');
-      btn.addEventListener('click', () => {
-        nav.classList.toggle('active');
-      });
-    </script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

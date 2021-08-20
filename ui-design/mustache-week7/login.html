@@ -14,7 +14,7 @@
     <title>Mustache | Week 7</title>
   </head>
 
-  <body class="homepage">
+  <body>
     <div class="wrapper">
       <header>
         <a href="/" aria-label="Home Page" class="logo"
@@ -40,7 +40,7 @@
         <nav>
           <ul class="nav__list">
             <li><a href="./search.html">Find A Race</a></li>
-            <li><a href="./login.html">Login</a></li>
+            <li><a class="current" href="./login.html">Login</a></li>
             <li><a href="./profile.html">Profile</a></li>
             <li><a href="./racelist.html">Race List</a></li>
             <li><a href="./about.html">About RaceKit</a></li>
@@ -49,9 +49,39 @@
       </header>
       <main>
         <h1>Race Kit</h1>
-        <div class="button__row">
-          <a href="./login.html" class="button button--primary">Sign In / Sign Up</a>
-          <a href="./search.html" class="button button--secondary">Find a Race</a>
+        <div class="col__wrapper">
+          <div>
+            <h2>Already have an account?</h2>
+            <form action="">
+              <div class="input-wrapper">
+                <input type="text" id="name" class="inputField" value="" />
+                <label for="name" class="inputLabel">Username</label>
+              </div>
+              <div class="input-wrapper">
+                <input type="password" id="skill" class="inputField" value="" />
+                <label for="skill" class="inputLabel">Password</label>
+              </div>
+              <a href="./profile.html" class="button button--secondary">Sign in</a>
+            </form>
+          </div>
+          <div>
+            <h2>Create an Account</h2>
+            <form action="">
+              <div class="input-wrapper">
+                <input type="text" id="name" class="inputField" value="" />
+                <label for="name" class="inputLabel">Full Name</label>
+              </div>
+              <div class="input-wrapper">
+                <input type="text" id="skill" class="inputField" value="" />
+                <label for="skill" class="inputLabel">Skill Level</label>
+              </div>
+              <div class="input-wrapper">
+                <textarea name="bio" id="style" class="inputField" cols="30" rows="10"></textarea>
+                <label for="style" class="inputLabel">Bio</label>
+              </div>
+              <a href="./profile.html" class="button button--primary">Create Account</a>
+            </form>
+          </div>
         </div>
       </main>
       <footer>
@@ -115,12 +145,6 @@
         <span>&copy; 2021 RaceKit</span>
       </footer>
     </div>
-    <script>
-      const btn = document.querySelector('.nav__trigger');
-      const nav = document.querySelector('nav');
-      btn.addEventListener('click', () => {
-        nav.classList.toggle('active');
-      });
-    </script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

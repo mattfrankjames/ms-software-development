@@ -14,7 +14,7 @@
     <title>Mustache | Week 7</title>
   </head>
 
-  <body class="homepage">
+  <body>
     <div class="wrapper">
       <header>
         <a href="/" aria-label="Home Page" class="logo"
@@ -49,10 +49,26 @@
       </header>
       <main>
         <h1>Race Kit</h1>
-        <div class="button__row">
-          <a href="./login.html" class="button button--primary">Sign In / Sign Up</a>
-          <a href="./search.html" class="button button--secondary">Find a Race</a>
-        </div>
+        <h2>Register for your event</h2>
+        <form action="">
+          <div class="input-wrapper">
+            <input type="text" id="name" class="inputField" value="" />
+            <label for="name" class="inputLabel">Full Name</label>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" id="skill" class="inputField" value="" />
+            <label for="skill" class="inputLabel">Age</label>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" id="style" class="inputField" value="" />
+            <label for="style" class="inputLabel">Category</label>
+          </div>
+          <div class="input-wrapper">
+            <input type="number" id="payment" class="inputField" value="" />
+            <label for="payment" class="inputLabel">Payment Info</label>
+          </div>
+          <a href="./confirmation.html" class="button button--primary">Register</a>
+        </form>
       </main>
       <footer>
         <div class="footer__icons">
@@ -115,12 +131,6 @@
         <span>&copy; 2021 RaceKit</span>
       </footer>
     </div>
-    <script>
-      const btn = document.querySelector('.nav__trigger');
-      const nav = document.querySelector('nav');
-      btn.addEventListener('click', () => {
-        nav.classList.toggle('active');
-      });
-    </script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

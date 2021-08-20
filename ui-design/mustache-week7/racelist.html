@@ -14,7 +14,7 @@
     <title>Mustache | Week 7</title>
   </head>
 
-  <body class="homepage">
+  <body>
     <div class="wrapper">
       <header>
         <a href="/" aria-label="Home Page" class="logo"
@@ -42,16 +42,63 @@
             <li><a href="./search.html">Find A Race</a></li>
             <li><a href="./login.html">Login</a></li>
             <li><a href="./profile.html">Profile</a></li>
-            <li><a href="./racelist.html">Race List</a></li>
+            <li><a class="current" href="./racelist.html">Race List</a></li>
             <li><a href="./about.html">About RaceKit</a></li>
           </ul>
         </nav>
       </header>
       <main>
         <h1>Race Kit</h1>
-        <div class="button__row">
-          <a href="./login.html" class="button button--primary">Sign In / Sign Up</a>
-          <a href="./search.html" class="button button--secondary">Find a Race</a>
+        <h2>Search Results</h2>
+        <div class="card-wrapper">
+          <div class="card">
+            <h3><a href="./single-race.html">Lost Valley Luau</a></h3>
+            <p>April 2, 2020</p>
+            <p>Weldon Springs</p>
+            <a href="./register.html" class="button button--primary">Enter</a>
+          </div>
+          <div class="card">
+            <h3><a href="./single-race.html">Brommelsiek Challenge</a></h3>
+            <p>April 23, 2020</p>
+            <p>Wentzville</p>
+            <a href="./register.html" class="button button--primary">Enter</a>
+          </div>
+          <div class="card">
+            <h3><a href="./single-race.html">Greensfelder Challenge</a></h3>
+            <p>May 7, 2020</p>
+            <p>Pacific</p>
+            <a href="./register.html" class="button button--primary">Enter</a>
+          </div>
+          <div class="card">
+            <h3><a href="./single-race.html">Rumble on Route 66</a></h3>
+            <p>June 4, 2020</p>
+            <p>St. James</p>
+            <a href="./register.html" class="button button--primary">Enter</a>
+          </div>
+          <div class="card">
+            <h3><a href="./single-race.html">Creve Couer Heartbreaker</a></h3>
+            <p>June 4, 2020</p>
+            <p>Creve Couer</p>
+            <a href="./register.html" class="button button--primary">Enter</a>
+          </div>
+          <div class="card">
+            <h3><a href="./single-race.html">Leadbelt XC</a></h3>
+            <p>July 16, 2020</p>
+            <p>Park Hills</p>
+            <a href="./register.html" class="button button--primary">Enter</a>
+          </div>
+          <div class="card">
+            <h3><a href="./single-race.html">Show Me State Games</a></h3>
+            <p>July 30, 2020</p>
+            <p>Columbia</p>
+            <a href="./register.html" class="button button--primary">Enter</a>
+          </div>
+          <div class="card">
+            <h3><a href="./single-race.html">Rhetts Run</a></h3>
+            <p>September 24, 2020</p>
+            <p>Columnbia</p>
+            <a href="./register.html" class="button button--primary">Enter</a>
+          </div>
         </div>
       </main>
       <footer>
@@ -115,12 +162,6 @@
         <span>&copy; 2021 RaceKit</span>
       </footer>
     </div>
-    <script>
-      const btn = document.querySelector('.nav__trigger');
-      const nav = document.querySelector('nav');
-      btn.addEventListener('click', () => {
-        nav.classList.toggle('active');
-      });
-    </script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
